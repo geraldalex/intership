@@ -2,12 +2,9 @@ import React from "react";
 import {
   StyleSheet,
   Text,
-  View,
   ImageBackground,
   Image,
   ActivityIndicator,
-  Button,
-  Dimensions,
 } from "react-native";
 import colors from "../../assets/colors/colors";
 import {
@@ -32,29 +29,29 @@ const Onboarding2 = () => {
   } else {
     return (
       <ImageBackground source={imageBackground} style={s.backgroundImage}>
-        <Image source={saly}  />
+        <Image source={saly} />
         <Text style={s.headerText}>Leave the Stress</Text>
         <Text style={s.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc est ut
           leo ut libero accumsan lacus, quisque.
         </Text>
-        <Image source={group175623} style={{marginBottom:25, width:52, height:4}} />
-        <ButtonOrange text='Next' />
+        <Image
+          source={group175623}
+          style={{ marginBottom: 25, width: 52, height: 4 }}
+        />
+        <ButtonOrange text="Next" />
       </ImageBackground>
     );
   }
 };
-
-// const deviceWidth = Math.round(Dimensions.get('window').width)
-// const deviceHeight = Math.round(Dimensions.get('window').height)
 
 const s = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     width: null,
     height: null,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   headerText: {
     fontFamily: "Poppins_500Medium",
@@ -69,9 +66,8 @@ const s = StyleSheet.create({
     color: colors.gray,
     textAlign: "center",
     marginTop: 10,
-    marginBottom:25
+    marginBottom: 25,
   },
-
 });
 
 export default Onboarding2;

@@ -2,12 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import colors from "../../assets/colors/colors";
 
-
 const ButtonGray = ({ text, onPress }) => {
- 
   return (
-    
-    <TouchableOpacity  onPress={onPress}>
+    <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>
         <View style={styles.button}>
           <Text style={styles.text}>{text}</Text>
@@ -28,11 +25,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 12,
     width: 100,
-    borderWidth:0.4,
-    borderColor:colors.orange
-
-
-    
+    borderWidth: 0.4,
+    borderColor: colors.orange,
   },
 
   text: {

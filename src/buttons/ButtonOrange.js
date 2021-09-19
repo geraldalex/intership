@@ -6,11 +6,9 @@ const ButtonOrange = ({ text, onPress}) => {
  
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={styles.container}>
         <View style={styles.button}>
           <Text style={styles.text}>{text}</Text>
         </View>
-      </View>
     </TouchableOpacity>
   );
 };
