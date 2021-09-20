@@ -15,29 +15,25 @@ import {
 } from "@expo-google-fonts/poppins";
 import ButtonOrange from "../buttons/ButtonOrange";
 import TabBar from "../tabBar/TabBar";
-import { ScrollView } from "react-native-gesture-handler";
+
 
 const moodBackGround = require("../../assets/Mood.png");
 const moodImage1 = require("../../assets/Group175660.png");
 const moodImage2 = require("../../assets/Group175661.png");
 const moodImage3 = require("../../assets/Group175662.png");
 
-
 const Mood = () => {
-    let [fontsLoaded] = useFonts({
-        Poppins_400Regular,
-        Poppins_500Medium,
-      });
-    
-      if (!fontsLoaded) {
-        return <ActivityIndicator />;
-      } else {
-  return (
-    <ImageBackground
-    source={moodBackGround}
-    style={styles.backgroundImage}
-    >
-            <View
+  let [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+    Poppins_500Medium,
+  });
+
+  if (!fontsLoaded) {
+    return <ActivityIndicator />;
+  } else {
+    return (
+      <ImageBackground source={moodBackGround} style={styles.backgroundImage}>
+        <View
           style={{ paddingLeft: 20, paddingTop: 45, alignSelf: "flex-start" }}
         >
           <Text
@@ -56,50 +52,40 @@ const Mood = () => {
               color: colors.gray,
             }}
           >
-           Which of these images describe best right now?
+            Which of these images describe best right now?
           </Text>
         </View>
         <View
           style={{
             flexDirection: "row",
             marginTop: 10,
-            width:'100%',
-            justifyContent: 'space-between', 
-                    
+            width: "100%",
+            justifyContent: "space-between",
           }}
         >
-          <Image
-          source={moodImage1}
-          style={{  height: 155}}
-        />
-          <Image
-          source={moodImage2}
-          style={{  height: 155}}
-        />
+          <Image source={moodImage1} style={{ height: 155 }} />
+          <Image source={moodImage2} style={{ height: 155 }} />
         </View>
-       
+
         <Image
-        source={moodImage3}
-        style={{  height: 232,width:250, resizeMode:'contain'}}
+          source={moodImage3}
+          style={{ height: 232, width: 250, resizeMode: "contain" }}
         />
-        <ButtonOrange text='Continue wish selected'  width={200}  />
-       
-       
-        <TabBar/>
-     
-    </ImageBackground>
-  );
-      }
+        <ButtonOrange text="Continue wish selected" width={200} />
+
+        <TabBar />
+      </ImageBackground>
+    );
+  }
 };
 
 export default Mood;
 
 const styles = StyleSheet.create({
-    backgroundImage: {
-        flex: 1,
-        width: null,
-        height: null,
-        alignItems: "center",
-        
-      },
+  backgroundImage: {
+    flex: 1,
+    width: null,
+    height: null,
+    alignItems: "center",
+  },
 });

@@ -17,8 +17,6 @@ const ButtonGray = ({ text, onPress }) => {
 export default ButtonGray;
 
 const styles = StyleSheet.create({
-  container: {},
-
   button: {
     borderRadius: 8,
     backgroundColor: colors.gary,

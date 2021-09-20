@@ -17,6 +17,7 @@ const educationImage1 = require("../../assets/Group175655.png");
 const educationImage2 = require("../../assets/Group175656.png");
 const educationImage3 = require("../../assets/Group175657.png");
 const educationImage4 = require("../../assets/Group175658.png");
+const educationImage5 = require("../../assets/Group175623.png");
 
 const EducationAndExercise = () => {
     let [fontsLoaded] = useFonts({
@@ -72,21 +73,37 @@ const EducationAndExercise = () => {
         </View>
 
         <View style={{flexDirection:'row', }}>
-       <Text>
+       <Text style={{fontFamily: "Poppins_500Medium",
+              fontSize: 16,
+              color: colors.orange,
+              paddingLeft:12,
+              marginRight:12
+              }}>
           Relaxation
           </Text>
-          <Text>
+          <Text style={{ fontFamily: "Poppins_400Regular",
+              fontSize: 16,
+              color: colors.gray,
+              marginRight:12
+              }}>
           Therapy
           </Text>
-          <Text>
+          <Text style={{ fontFamily: "Poppins_400Regular",
+              fontSize: 16,
+              color: colors.gray,}}>
           Lifestyle
           </Text>
         
         </View>
         <Image
-          source={educationImage4}
-          style={{ height:353, width:335, resizeMode:'stretch'}}
+          source={educationImage5}
+          style={{  width:16,height:4,marginLeft:12}}
         />
+        <Image
+          source={educationImage4}
+          style={{ height:353, width:335, resizeMode:'stretch', marginBottom:80}}
+        />
+        <TabBar/>
         </ScrollView>
         </ImageBackground>
        
