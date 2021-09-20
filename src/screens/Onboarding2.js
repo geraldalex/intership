@@ -39,7 +39,7 @@ const Onboarding2 = () => {
           source={group175623}
           style={{ marginBottom: 25, width: 52, height: 4 }}
         />
-        <ButtonOrange text="Next" />
+        <ButtonOrange text="Next"  width={134} />
       </ImageBackground>
     );
   }

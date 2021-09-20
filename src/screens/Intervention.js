@@ -66,7 +66,7 @@ const Intervention = () => {
           source={medal}
           style={{ height: 85,width:312,  resizeMode: 'cover', marginBottom:10, marginTop:10  }}
         />
-        <ButtonOrange text='Continue' />
+        <ButtonOrange text='Continue' width={134} />
         <TabBar/>
       </ImageBackground>
     );

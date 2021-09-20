@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: null,
     height: null,
-    alignItems: "center",
+    
   },
   nameText: {
     fontFamily: "Poppins_500Medium",

@@ -79,7 +79,7 @@ const Meme1 = () => {
           }}
         >
           <ButtonGray text="Skip"  />
-          <ButtonOrange text="Next Meme" />
+          <ButtonOrange text="Next Meme"  width={140} />
         </View>
         <TabBar />
       </ImageBackground>

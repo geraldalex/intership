@@ -15,6 +15,7 @@ import {
 } from "@expo-google-fonts/poppins";
 import ButtonOrange from "../buttons/ButtonOrange";
 import TabBar from "../tabBar/TabBar";
+import { ScrollView } from "react-native-gesture-handler";
 
 const moodBackGround = require("../../assets/Mood.png");
 const moodImage1 = require("../../assets/Group175660.png");
@@ -76,12 +77,16 @@ const Mood = () => {
           style={{  height: 155}}
         />
         </View>
+       
         <Image
         source={moodImage3}
-        style={{  height: 220,width:220, resizeMode:'contain'}}
+        style={{  height: 232,width:250, resizeMode:'contain'}}
         />
-        <ButtonOrange text='Continue wish selected'/>
-      <TabBar/>
+        <ButtonOrange text='Continue wish selected'  width={200}  />
+       
+       
+        <TabBar/>
+     
     </ImageBackground>
   );
       }
@@ -95,5 +100,6 @@ const styles = StyleSheet.create({
         width: null,
         height: null,
         alignItems: "center",
+        
       },
 });
