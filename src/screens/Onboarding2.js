@@ -28,10 +28,10 @@ const Onboarding2 = () => {
     return <ActivityIndicator />;
   } else {
     return (
-      <ImageBackground source={imageBackground} style={s.backgroundImage}>
+      <ImageBackground source={imageBackground} style={styles.backgroundImage}>
         <Image source={saly} />
-        <Text style={s.headerText}>Leave the Stress</Text>
-        <Text style={s.text}>
+        <Text style={styles.headerText}>Leave the Stress</Text>
+        <Text style={styles.text}>tyles
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc est ut
           leo ut libero accumsan lacus, quisque.
         </Text>
@@ -45,7 +45,7 @@ const Onboarding2 = () => {
   }
 };
 
-const s = StyleSheet.create({
+const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     width: null,
