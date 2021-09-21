@@ -6,18 +6,19 @@ import {
   ImageBackground,
   Image,
   ActivityIndicator,
+  TextInput,
 } from "react-native";
-import colors from "../../assets/colors/colors";
-
 import {
   useFonts,
   Poppins_400Regular,
   Poppins_500Medium,
 } from "@expo-google-fonts/poppins";
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Octicons } from "@expo/vector-icons";
+import colors from "../../assets/colors/colors";
+import { TouchableOpacity } from "react-native-gesture-handler";
 const loginBackground = require("../../assets/LogInscreen.png");
-import { Octicons } from '@expo/vector-icons'; 
+const logWith = require("../../assets/Group687.png");
 
 const Login = () => {
   let [fontsLoaded] = useFonts({
@@ -76,7 +77,6 @@ const Login = () => {
             </Text>
             <Text
               style={{
-                marginRight: 20,
                 fontFamily: "Poppins_400Regular",
                 color: "#C5C5C5",
               }}
@@ -103,15 +103,80 @@ const Login = () => {
           />
 
           <View style={styles.borderContainer}>
-          <MaterialCommunityIcons name="email-outline" size={24} color={colors.orange} style={{paddingLeft:'5%'}} />
+            <MaterialCommunityIcons
+              name="email-outline"
+              size={26}
+              color={colors.orange}
+              style={{ paddingLeft: "5%" }}
+            />
+            <TextInput
+              width="80%"
+              placeholder="Email Address"
+              style={{ marginLeft: "5%" }}
+            />
           </View>
           <View style={styles.borderContainer}>
-          <Octicons name="lock" size={24} color={colors.orange} style={{paddingLeft:'5%'}} />
+            <Octicons
+              name="lock"
+              size={26}
+              color={colors.orange}
+              style={{ paddingLeft: "5%" }}
+            />
+            <TextInput
+              width="80%"
+              placeholder="Password"
+              secureTextEntry={true}
+              marginLeft="7%"
+            />
           </View>
+          <Text
+            style={{
+              alignSelf: "flex-end",
+              marginRight: "10%",
+              marginTop: "10%",
+            }}
+          >
+            Forgot Password?
+          </Text>
 
-      
-        
+          <TouchableOpacity>
+            <View style={styles.button}>
+              <Text style={styles.text}>Login</Text>
+            </View>
+          </TouchableOpacity>
         </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            paddingTop: "5%",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "Poppins_400Regular",
+              fontSize: 17,
+              color: colors.gray,
+            }}
+          >
+            Don’t have an account?
+          </Text>
+          <Text
+            style={{
+              fontFamily: "Poppins_400Regular",
+              fontSize: 17,
+              color: colors.orange,
+            }}
+          >
+            {" "}
+            Signup
+          </Text>
+        </View>
+        <Image
+          source={logWith}
+          style={{ width: 119, height: 86, marginTop: "5%" }}
+        />
       </ImageBackground>
     );
   }
@@ -143,18 +208,29 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   borderContainer: {
-
-    marginTop: '5%',
+    marginTop: "5%",
     left: "10%",
     flexDirection: "row",
     width: "80%",
-    height: '15%',
-    borderColor:'#C5C5C5',
+    height: "15%",
+    borderColor: "#C5C5C5",
     borderRadius: 14,
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start",
     alignItems: "center",
     borderWidth: 1,
-   
-   
-  }
+  },
+  button: {
+    borderRadius: 14,
+    backgroundColor: colors.orange,
+    paddingVertical: 12,
+    width: "80%",
+    marginTop: "5%",
+    left: "10%",
+  },
+
+  text: {
+    color: "white",
+    fontSize: 16,
+    textAlign: "center",
+  },
 });

@@ -16,7 +16,7 @@ const ButtonOrange = ({ text, onPress,width }) => {
 export default ButtonOrange;
 
 const styles = StyleSheet.create({
-  container: {},
+  
 
   button: {
     borderRadius: 8,
