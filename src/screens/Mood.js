@@ -71,7 +71,7 @@ const Mood = () => {
           source={moodImage3}
           style={{ height: 232, width: 250, resizeMode: "contain" }}
         />
-        <ButtonOrange text="Continue wish selected" width={200} />
+        <ButtonOrange text="Continue wish selected" width={210} />
 
         <TabBar />
       </ImageBackground>

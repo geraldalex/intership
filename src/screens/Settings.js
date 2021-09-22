@@ -39,10 +39,10 @@ const Settings = () => {
       >
         <Text style={styles.headerText}>Setting</Text>
         <View style={styles.menuBlock}>
-          <TouchableOpacity>
+          <TouchableOpacity >
             <Image
               source={avatar}
-              style={{ height: 100, width: 100, resizeMode: "contain" }}
+              style={{  width: '100%', resizeMode: "contain" }}
             />
           </TouchableOpacity>
           <Text style={styles.nameText}>John Doe</Text>

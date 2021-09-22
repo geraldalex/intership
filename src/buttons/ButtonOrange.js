@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.orange,
     paddingHorizontal: 10,
     paddingVertical: 12,
-    width: 134,
+    
   },
 
   text: {

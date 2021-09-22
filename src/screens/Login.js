@@ -17,6 +17,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import colors from "../../assets/colors/colors";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import LogSignLogo from "../logSignLogo/LogSignLogo";
 const loginBackground = require("../../assets/LogInscreen.png");
 const logWith = require("../../assets/Group687.png");
 
@@ -134,6 +135,8 @@ const Login = () => {
               alignSelf: "flex-end",
               marginRight: "10%",
               marginTop: "10%",
+              color: colors.gray,
+              fontFamily: "Poppins_400Regular"
             }}
           >
             Forgot Password?
@@ -173,10 +176,16 @@ const Login = () => {
             Signup
           </Text>
         </View>
-        <Image
-          source={logWith}
-          style={{ width: 119, height: 86, marginTop: "5%" }}
-        />
+        <Text
+          style={{
+            marginTop: "5%",
+            color: colors.gray,
+            fontFamily: "Poppins_400Regular",
+          }}
+        >
+          Sign up with
+        </Text>
+        <LogSignLogo/>
       </ImageBackground>
     );
   }
@@ -212,7 +221,7 @@ const styles = StyleSheet.create({
     left: "10%",
     flexDirection: "row",
     width: "80%",
-    height: "15%",
+    height: "10%",
     borderColor: "#C5C5C5",
     borderRadius: 14,
     justifyContent: "flex-start",

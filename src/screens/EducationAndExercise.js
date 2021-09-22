@@ -7,12 +7,11 @@ import { StyleSheet, Text, View, ActivityIndicator,
         Poppins_400Regular,
         Poppins_500Medium,
       } from "@expo-google-fonts/poppins";
-      import ButtonOrange from "../buttons/ButtonOrange";
       import TabBar from "../tabBar/TabBar";
       import { ScrollView } from "react-native-gesture-handler";
       import colors from "../../assets/colors/colors";
 
-      const educationBackGround = require("../../assets/EducationAndExerciseTab.png");
+const educationBackGround = require("../../assets/EducationAndExerciseTab.png");
 const educationImage1 = require("../../assets/Group175655.png");
 const educationImage2 = require("../../assets/Group175656.png");
 const educationImage3 = require("../../assets/Group175657.png");
@@ -56,19 +55,20 @@ const EducationAndExercise = () => {
             rate the following visual
           </Text>
         </View>
-        <ScrollView >
+        <ScrollView width='100%' >
         <Image
           source={educationImage1}
-          style={{ height:207, width:335}}
+          style={{ width:'100%' }}
+         
         />
-        <View style={{flexDirection:'row',  justifyContent: 'space-between'}}>
+        <View style={{flexDirection:'row',  justifyContent: 'space-between', width: '100%'}}>
         <Image
           source={educationImage2}
-          style={{ height:195, width:160}}
+          style={{ width:"50%"}}
         />
         <Image
           source={educationImage3}
-          style={{ height:195, width:160}}
+          style={{ width:'50%'}}
         />
         </View>
 
@@ -76,7 +76,7 @@ const EducationAndExercise = () => {
        <Text style={{fontFamily: "Poppins_500Medium",
               fontSize: 16,
               color: colors.orange,
-              paddingLeft:12,
+              paddingLeft:"5%",
               marginRight:12
               }}>
           Relaxation
@@ -101,7 +101,7 @@ const EducationAndExercise = () => {
         />
         <Image
           source={educationImage4}
-          style={{ height:353, width:335, resizeMode:'stretch', marginBottom:80}}
+          style={{ width:'100%', marginBottom:80}}
         />
         <TabBar/>
         </ScrollView>
