@@ -32,54 +32,16 @@ const Meme1 = () => {
   } else {
     return (
       <ImageBackground source={memeBackGround} style={styles.backgroundImage}>
-        <View
-          style={{ paddingLeft: 20, paddingTop: 45, alignSelf: "flex-start" }}
-        >
-          <Text
-            style={{
-              fontFamily: "Poppins_500Medium",
-              fontSize: 30,
-              color: colors.orange,
-            }}
-          >
-            Hi John,
-          </Text>
-          <Text
-            style={{
-              fontFamily: "Poppins_400Regular",
-              fontSize: 18,
-              color: colors.gray,
-            }}
-          >
-            rate the following visual
-          </Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerText}>Hi John,</Text>
+          <Text style={styles.underHeaderText}>rate the following visual</Text>
         </View>
-        <Image
-          source={group175618}
-          style={{  height: 50.38, marginTop: 25 }}
-        />
-        <Text
-          style={{
-            fontFamily: "Poppins_400Regular",
-            fontSize: 18,
-            color: colors.orange,
-            textAlign: "center",
-          }}
-        >
-          Moderate
-        </Text>
+        <Image source={group175618} style={{ width: "95%" }} />
+        <Text style={styles.levelText}>Moderate</Text>
         <MemeCard />
-        <View
-          style={{
-            flexDirection: "row",
-            marginTop: 20,
-            width:'70%',
-            justifyContent: 'space-between', 
-            marginBottom:20         
-          }}
-        >
-          <ButtonGray text="Skip"  />
-          <ButtonOrange text="Next Meme"  width={140} />
+        <View style={styles.buttonContainer}>
+          <ButtonGray text="Skip" />
+          <ButtonOrange text="Next Meme" width={140} />
         </View>
         <TabBar />
       </ImageBackground>
@@ -95,6 +57,33 @@ const styles = StyleSheet.create({
     width: null,
     height: null,
     alignItems: "center",
-   
+  },
+  headerTextContainer: {
+    paddingLeft: 20,
+    paddingTop: 45,
+    alignSelf: "flex-start",
+  },
+  headerText: {
+    fontFamily: "Poppins_500Medium",
+    fontSize: 30,
+    color: colors.orange,
+  },
+  underHeaderText: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 18,
+    color: colors.gray,
+  },
+  levelText: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 18,
+    color: colors.orange,
+    textAlign: "center",
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    marginTop: 20,
+    width: "70%",
+    justifyContent: "space-between",
+    marginBottom: 20,
   },
 });

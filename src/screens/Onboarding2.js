@@ -4,6 +4,7 @@ import {
   Text,
   ImageBackground,
   Image,
+  View,
   ActivityIndicator,
 } from "react-native";
 import colors from "../../assets/colors/colors";
@@ -16,7 +17,7 @@ import ButtonOrange from "../buttons/ButtonOrange";
 
 const imageBackground = require("../../assets/Onboarding2.png");
 const saly = require("../../assets/Saly-7.png");
-const group175623 = require("../../assets/Group175623.png");
+
 
 const Onboarding2 = () => {
   let [fontsLoaded] = useFonts({
@@ -31,15 +32,20 @@ const Onboarding2 = () => {
       <ImageBackground source={imageBackground} style={styles.backgroundImage}>
         <Image source={saly} />
         <Text style={styles.headerText}>Leave the Stress</Text>
-        <Text style={styles.text}>tyles
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc est ut
-          leo ut libero accumsan lacus, quisque.
+        <Text style={styles.text}>
+          tyles Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          est ut leo ut libero accumsan lacus, quisque.
         </Text>
-        <Image
-          source={group175623}
-          style={{ marginBottom: 25, width: 52, height: 4 }}
-        />
-        <ButtonOrange text="Next"  width={134} />
+
+        <View style={{ flexDirection: "row", marginBottom: "8%" }}>
+          <View
+            style={styles.orangeLine}
+          />
+          <View
+            style={styles.opacityOrangeLine}
+          />
+        </View>
+        <ButtonOrange text="Next" width={134} />
       </ImageBackground>
     );
   }
@@ -68,6 +74,19 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 25,
   },
+  orangeLine: {
+    borderBottomColor: colors.orange,
+              borderBottomWidth: 4,
+              width: "10%",
+              borderRadius: 2,
+              marginRight: "1%",
+  },
+  opacityOrangeLine: {
+    borderBottomColor: "rgba(255, 137, 72, 0.2)",
+    borderBottomWidth: 4,
+    width: "4%",
+    borderRadius: 2,
+  }
 });
 
 export default Onboarding2;

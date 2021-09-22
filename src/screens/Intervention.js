@@ -34,40 +34,19 @@ const Intervention = () => {
         source={inverventionBackGround}
         style={styles.backgroundImage}
       >
-        <View
-          style={{ paddingLeft: 20, paddingTop: 45, alignSelf: "flex-start" }}
-        >
-          <Text
-            style={{
-              fontFamily: "Poppins_500Medium",
-              fontSize: 30,
-              color: colors.orange,
-            }}
-          >
-            Therapy
-          </Text>
-          <Text
-            style={{
-              fontFamily: "Poppins_500Medium",
-              fontSize: 30,
-              color: colors.orange,
-            }}
-          >
-            Intervention
-          </Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerText}>Therapy</Text>
+          <Text style={styles.headerText}>Intervention</Text>
         </View>
 
-        <Image
-          source={photo}
-          style={{ height: 300, resizeMode: 'cover' }}
-        />
-      
+        <Image source={photo} style={{ height: 300, resizeMode: "cover" }} />
+
         <Image
           source={medal}
-          style={{ height: 85,width:312,  resizeMode: 'cover', marginBottom:10, marginTop:10  }}
+          style={styles.achiveStylyImg}
         />
-        <ButtonOrange text='Continue' width={134} />
-        <TabBar/>
+        <ButtonOrange text="Continue" width={134} />
+        <TabBar />
       </ImageBackground>
     );
   }
@@ -82,4 +61,21 @@ const styles = StyleSheet.create({
     height: null,
     alignItems: "center",
   },
+  headerTextContainer: {
+    paddingLeft: 20,
+    paddingTop: 45,
+    alignSelf: "flex-start",
+  },
+  headerText: {
+    fontFamily: "Poppins_500Medium",
+    fontSize: 30,
+    color: colors.orange,
+  },
+  achiveStylyImg:{
+    height: 85,
+    width: 312,
+    resizeMode: "cover",
+    marginBottom: 10,
+    marginTop: 10,
+  }
 });

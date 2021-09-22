@@ -39,10 +39,10 @@ const Settings = () => {
       >
         <Text style={styles.headerText}>Setting</Text>
         <View style={styles.menuBlock}>
-          <TouchableOpacity >
+          <TouchableOpacity>
             <Image
               source={avatar}
-              style={{  width: '100%', resizeMode: "contain" }}
+              style={{ width: "100%", resizeMode: "contain" }}
             />
           </TouchableOpacity>
           <Text style={styles.nameText}>John Doe</Text>
@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width: null,
     height: null,
-    
   },
   nameText: {
     fontFamily: "Poppins_500Medium",

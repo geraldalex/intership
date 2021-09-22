@@ -6,7 +6,6 @@ import {
   ImageBackground,
   ActivityIndicator,
   TextInput,
-
 } from "react-native";
 import {
   useFonts,
@@ -33,76 +32,19 @@ const SignUp = () => {
   } else {
     return (
       <ImageBackground source={loginBackground} style={styles.backgroundImage}>
-        <View
-          style={{
-            paddingLeft: "5%",
-            paddingTop: "15%",
-            alignSelf: "flex-start",
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "Poppins_500Medium",
-              fontSize: 30,
-              color: colors.orange,
-            }}
-          >
-            Create Your Account
-          </Text>
-          <Text
-            style={{
-              fontFamily: "Poppins_400Regular",
-              fontSize: 18,
-              color: colors.gray,
-            }}
-          >
-            Sign up and get started
-          </Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerText}>Create Your Account</Text>
+          <Text style={styles.underHeaderText}>Sign up and get started</Text>
         </View>
 
         <View style={styles.cardContainer}>
-          <View
-            style={{
-              flexDirection: "row",
-              paddingLeft: "10%",
-              paddingTop: "10%",
-            }}
-          >
-            <Text
-              style={{
-                marginRight: 20,
-                fontFamily: "Poppins_400Regular",
-                color: "#C5C5C5",
-              }}
-            >
-              LOG IN
-            </Text>
-            <Text
-              style={{
-                fontFamily: "Poppins_500Medium",
-                color: colors.orange,
-              }}
-            >
-              SIGN UP
-            </Text>
+          <View style={styles.logSignUpTextContainer}>
+            <Text style={styles.logText}>LOG IN</Text>
+            <Text style={styles.signUpText}>SIGN UP</Text>
           </View>
 
-          <View
-            style={{
-              borderBottomColor: colors.orange,
-              borderBottomWidth: 3,
-              width: "17%",
-              marginLeft: "29%",
-            }}
-          />
-          <View
-            style={{
-              borderBottomColor: "#C5C5C5",
-              borderBottomWidth: 1,
-              width: "80%",
-              alignSelf: "center",
-            }}
-          />
+          <View style={styles.orangeLine} />
+          <View style={styles.grayLine} />
 
           <View style={styles.borderContainer}>
             <Ionicons
@@ -140,18 +82,12 @@ const SignUp = () => {
             />
             <TextInput
               width="80%"
-              placeholder="Password"
+              placeholder="Phone number"
               secureTextEntry={true}
               marginLeft="5%"
             />
           </View>
-          <Text
-            style={{
-              textAlign: "center",
-              marginTop: "10%",
-              color: "#C5C5C5",
-            }}
-          >
+          <Text style={styles.verifyText}>
             We will send an OTP to verify it is you
           </Text>
 
@@ -162,17 +98,9 @@ const SignUp = () => {
           </TouchableOpacity>
         </View>
 
-        <Text
-          style={{
-            marginTop: "5%",
-            color: colors.gray,
-            fontFamily: "Poppins_400Regular",
-          }}
-        >
-          Sign up with
-        </Text>
+        <Text style={styles.signUpWithText}>Sign up with</Text>
 
-        <LogSignLogo/>
+        <LogSignLogo />
       </ImageBackground>
     );
   }
@@ -228,5 +156,56 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
     textAlign: "center",
+  },
+  headerTextContainer: {
+    paddingLeft: "5%",
+    paddingTop: "15%",
+    alignSelf: "flex-start",
+  },
+  headerText: {
+    fontFamily: "Poppins_500Medium",
+    fontSize: 30,
+    color: colors.orange,
+  },
+  underHeaderText: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 18,
+    color: colors.gray,
+  },
+  logSignUpTextContainer: {
+    flexDirection: "row",
+    paddingLeft: "10%",
+    paddingTop: "10%",
+  },
+  logText: {
+    marginRight: 20,
+    fontFamily: "Poppins_400Regular",
+    color: "#C5C5C5",
+  },
+  signUpText: {
+    fontFamily: "Poppins_500Medium",
+    color: colors.orange,
+  },
+  orangeLine: {
+    borderBottomColor: colors.orange,
+    borderBottomWidth: 3,
+    width: "17%",
+    marginLeft: "29%",
+  },
+  grayLine: {
+    borderBottomColor: "#C5C5C5",
+    borderBottomWidth: 1,
+    width: "80%",
+    alignSelf: "center",
+  },
+  verifyText: {
+    textAlign: "center",
+    marginTop: "10%",
+    color: "#C5C5C5",
+  },
+  signUpWithText: {
+    marginTop: "5%",
+    color: colors.gray,
+    fontFamily: "Poppins_400Regular",
   },
 });

@@ -63,9 +63,9 @@ const styles = StyleSheet.create({
   },
 
   imageStyle: {
-    width: 287,
-    height: 159,
+    width:"92%",
     alignSelf: "center",
+    borderRadius:12
   },
   textContainer: {
     paddingLeft: 14,
