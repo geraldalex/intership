@@ -32,76 +32,19 @@ const Login = () => {
   } else {
     return (
       <ImageBackground source={loginBackground} style={styles.backgroundImage}>
-        <View
-          style={{
-            paddingLeft: "5%",
-            paddingTop: "15%",
-            alignSelf: "flex-start",
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "Poppins_500Medium",
-              fontSize: 30,
-              color: colors.orange,
-            }}
-          >
-            Welcome Back,
-          </Text>
-          <Text
-            style={{
-              fontFamily: "Poppins_400Regular",
-              fontSize: 18,
-              color: colors.gray,
-            }}
-          >
-            Log in to continue
-          </Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerText}>Welcome Back,</Text>
+          <Text style={styles.underHeaderText}>Log in to continue</Text>
         </View>
 
         <View style={styles.cardContainer}>
-          <View
-            style={{
-              flexDirection: "row",
-              paddingLeft: "10%",
-              paddingTop: "10%",
-            }}
-          >
-            <Text
-              style={{
-                marginRight: 20,
-                fontFamily: "Poppins_500Medium",
-                color: colors.orange,
-              }}
-            >
-              LOG IN
-            </Text>
-            <Text
-              style={{
-                fontFamily: "Poppins_400Regular",
-                color: "#C5C5C5",
-              }}
-            >
-              SIGN UP
-            </Text>
+          <View style={styles.logSignUpTextContainer}>
+            <Text style={styles.logText}>LOG IN</Text>
+            <Text style={styles.signUpText}>SIGN UP</Text>
           </View>
 
-          <View
-            style={{
-              borderBottomColor: colors.orange,
-              borderBottomWidth: 3,
-              width: "14%",
-              marginLeft: "10%",
-            }}
-          />
-          <View
-            style={{
-              borderBottomColor: "#C5C5C5",
-              borderBottomWidth: 1,
-              width: "80%",
-              alignSelf: "center",
-            }}
-          />
+          <View style={styles.orangeLine} />
+          <View style={styles.grayLine} />
 
           <View style={styles.borderContainer}>
             <MaterialCommunityIcons
@@ -130,17 +73,7 @@ const Login = () => {
               marginLeft="7%"
             />
           </View>
-          <Text
-            style={{
-              alignSelf: "flex-end",
-              marginRight: "10%",
-              marginTop: "10%",
-              color: colors.gray,
-              fontFamily: "Poppins_400Regular"
-            }}
-          >
-            Forgot Password?
-          </Text>
+          <Text style={styles.forPassText}>Forgot Password?</Text>
 
           <TouchableOpacity>
             <View style={styles.button}>
@@ -149,43 +82,12 @@ const Login = () => {
           </TouchableOpacity>
         </View>
 
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            paddingTop: "5%",
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "Poppins_400Regular",
-              fontSize: 17,
-              color: colors.gray,
-            }}
-          >
-            Don’t have an account?
-          </Text>
-          <Text
-            style={{
-              fontFamily: "Poppins_400Regular",
-              fontSize: 17,
-              color: colors.orange,
-            }}
-          >
-            {" "}
-            Signup
-          </Text>
+        <View style={styles.underFormTextContainer}>
+          <Text style={styles.firstText}>Don’t have an account?</Text>
+          <Text style={styles.secondText}> Signup</Text>
         </View>
-        <Text
-          style={{
-            marginTop: "5%",
-            color: colors.gray,
-            fontFamily: "Poppins_400Regular",
-          }}
-        >
-          Sign up with
-        </Text>
-        <LogSignLogo/>
+        <Text style={styles.signUpWithText}>Sign up with</Text>
+        <LogSignLogo />
       </ImageBackground>
     );
   }
@@ -241,5 +143,73 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
     textAlign: "center",
+  },
+  headerTextContainer: {
+    paddingLeft: "5%",
+    paddingTop: "15%",
+    alignSelf: "flex-start",
+  },
+  headerText: {
+    fontFamily: "Poppins_500Medium",
+    fontSize: 30,
+    color: colors.orange,
+  },
+  underHeaderText: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 18,
+    color: colors.gray,
+  },
+  logSignUpTextContainer: {
+    flexDirection: "row",
+    paddingLeft: "10%",
+    paddingTop: "10%",
+  },
+  logText: {
+    marginRight: 20,
+    fontFamily: "Poppins_500Medium",
+    color: colors.orange,
+  },
+  signUpText: {
+    fontFamily: "Poppins_400Regular",
+    color: "#C5C5C5",
+  },
+  orangeLine: {
+    borderBottomColor: colors.orange,
+    borderBottomWidth: 3,
+    width: "14%",
+    marginLeft: "10%",
+  },
+  grayLine: {
+    borderBottomColor: "#C5C5C5",
+    borderBottomWidth: 1,
+    width: "80%",
+    alignSelf: "center",
+  },
+  forPassText: {
+    alignSelf: "flex-end",
+    marginRight: "10%",
+    marginTop: "10%",
+    color: colors.gray,
+    fontFamily: "Poppins_400Regular",
+  },
+  underFormTextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingTop: "5%",
+  },
+  firstText: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 17,
+    color: colors.gray,
+  },
+  secondText: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 17,
+    color: colors.orange,
+  },
+  signUpWithText: {
+    marginTop: "5%",
+    color: colors.gray,
+    fontFamily: "Poppins_400Regular",
   },
 });
