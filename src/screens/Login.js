@@ -21,7 +21,7 @@ import LogSignLogo from "../logSignLogo/LogSignLogo";
 const loginBackground = require("../../assets/LogInscreen.png");
 const logWith = require("../../assets/Group687.png");
 
-const Login = () => {
+const Login = ({ navigation }) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -40,7 +40,9 @@ const Login = () => {
         <View style={styles.cardContainer}>
           <View style={styles.logSignUpTextContainer}>
             <Text style={styles.logText}>LOG IN</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
             <Text style={styles.signUpText}>SIGN UP</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.orangeLine} />
@@ -75,7 +77,7 @@ const Login = () => {
           </View>
           <Text style={styles.forPassText}>Forgot Password?</Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('EducationAndExercise')}>
             <View style={styles.button}>
               <Text style={styles.text}>Login</Text>
             </View>
@@ -84,7 +86,9 @@ const Login = () => {
 
         <View style={styles.underFormTextContainer}>
           <Text style={styles.firstText}>Don’t have an account?</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
           <Text style={styles.secondText}> Signup</Text>
+          </TouchableOpacity>
         </View>
         <Text style={styles.signUpWithText}>Sign up with</Text>
         <LogSignLogo />

@@ -20,7 +20,7 @@ const inverventionBackGround = require("../../assets/Intervention.png");
 const photo = require("../../assets/Group175663.png");
 const medal = require("../../assets/Group175664.png");
 
-const Intervention = () => {
+const Intervention = ({navigation}) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -46,7 +46,7 @@ const Intervention = () => {
           style={styles.achiveStylyImg}
         />
         <ButtonOrange text="Continue" width={134} />
-        <TabBar />
+        <TabBar navigation={navigation} />
       </ImageBackground>
     );
   }

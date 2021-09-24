@@ -23,7 +23,7 @@ const educationImage3 = require("../../assets/Group175657.png");
 const educationImage4 = require("../../assets/Group175658.png");
 const educationImage5 = require("../../assets/Group175623.png");
 
-const EducationAndExercise = () => {
+const EducationAndExercise = ({ navigation }) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -61,7 +61,7 @@ const EducationAndExercise = () => {
             source={educationImage4}
             style={{ width: "100%", marginBottom: 80 }}
           />
-          <TabBar />
+          <TabBar navigation={ navigation }/>
         </ScrollView>
       </ImageBackground>
     );

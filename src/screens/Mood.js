@@ -21,7 +21,7 @@ const moodImage1 = require("../../assets/Group175660.png");
 const moodImage2 = require("../../assets/Group175661.png");
 const moodImage3 = require("../../assets/Group175662.png");
 
-const Mood = () => {
+const Mood = ({ navigation }) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -44,9 +44,9 @@ const Mood = () => {
         </View>
 
         <Image source={moodImage3} style={styles.imgMain} />
-        <ButtonOrange text="Continue wish selected" width={210} />
+        <ButtonOrange text="Continue wish selected" width={210} onPress={() => navigation.navigate('Meme') }/>
 
-        <TabBar />
+        <TabBar navigation={navigation} />
       </ImageBackground>
     );
   }

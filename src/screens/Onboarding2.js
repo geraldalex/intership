@@ -19,7 +19,7 @@ const imageBackground = require("../../assets/Onboarding2.png");
 const saly = require("../../assets/Saly-7.png");
 
 
-const Onboarding2 = () => {
+const Onboarding2 = ({ navigation }) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -45,7 +45,7 @@ const Onboarding2 = () => {
             style={styles.opacityOrangeLine}
           />
         </View>
-        <ButtonOrange text="Next" width={134} />
+        <ButtonOrange text="Next" width={134} onPress={() => navigation.navigate('Login')}/>
       </ImageBackground>
     );
   }

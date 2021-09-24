@@ -21,7 +21,7 @@ import TabBar from "../tabBar/TabBar";
 const memeBackGround = require("../../assets/MemeBackGround.png");
 const group175618 = require("../../assets/Group175618.png");
 
-const Meme1 = () => {
+const Meme1 = ({navigation}) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -43,7 +43,7 @@ const Meme1 = () => {
           <ButtonGray text="Skip" />
           <ButtonOrange text="Next Meme" width={140} />
         </View>
-        <TabBar />
+        <TabBar navigation={navigation}/>
       </ImageBackground>
     );
   }

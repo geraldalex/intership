@@ -21,7 +21,7 @@ import LogSignLogo from "../logSignLogo/LogSignLogo";
 const loginBackground = require("../../assets/LogInscreen.png");
 const logWith = require("../../assets/Group687.png");
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -39,7 +39,9 @@ const SignUp = () => {
 
         <View style={styles.cardContainer}>
           <View style={styles.logSignUpTextContainer}>
+          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={styles.logText}>LOG IN</Text>
+            </TouchableOpacity>
             <Text style={styles.signUpText}>SIGN UP</Text>
           </View>
 
@@ -81,17 +83,19 @@ const SignUp = () => {
               style={{ paddingLeft: "5%" }}
             />
             <TextInput
+            keyboardType={'phone-pad'}
               width="80%"
               placeholder="Phone number"
               secureTextEntry={true}
               marginLeft="5%"
+              
             />
           </View>
           <Text style={styles.verifyText}>
             We will send an OTP to verify it is you
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('EducationAndExercise')}>
             <View style={styles.button}>
               <Text style={styles.text}>Sign Up</Text>
             </View>
